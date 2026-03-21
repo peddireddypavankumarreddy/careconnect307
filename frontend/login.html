@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | CareConnect</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body style="display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0;">
+
+    <div class="glass-card" style="width: 380px; text-align: center;">
+        <div style="font-size: 50px; color: #4facfe; margin-bottom: 10px;">
+            <i class="fas fa-bowl-food"></i>
+        </div>
+        <h1 style="font-size: 24px; margin-bottom: 20px; font-weight: 800; background: linear-gradient(135deg, #4facfe, #00f2fe); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">CareConnect</h1>
+        
+        <h2 style="margin-bottom: 30px; opacity: 0.9;">Welcome Back 👋</h2>
+        
+        <form onsubmit="loginUser(event)">
+            <input id="emailInput" type="email" placeholder="Email Address" required>
+            <input id="passwordInput" type="password" placeholder="Password" required>
+            <button type="submit">Sign In</button>
+        </form>
+
+        <div style="margin-top: 25px; font-size: 14px; opacity: 0.8;">
+            <a href="register.html" style="color: #00f2fe; text-decoration: none;">New here? Create account</a>
+            <br><br>
+            <a href="forgot.html" style="color: #aaa; text-decoration: none;">Forgot Password?</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

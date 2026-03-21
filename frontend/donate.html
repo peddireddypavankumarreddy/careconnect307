@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Donate Food | CareConnect</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body onload="checkAuth(); loadNavbar()">
+
+    <div id="nav"></div>
+
+    <div class="container" style="max-width: 500px;">
+        <div class="glass-card">
+            <h2 style="text-align: center; color: #43e97b;">
+                <i class="fas fa-plus-circle"></i> Donate Food
+            </h2>
+            <p style="text-align: center; opacity: 0.7; font-size: 14px; margin-bottom: 20px;">
+                Share your surplus with those in need.
+            </p>
+            
+            <form onsubmit="submitDonation(event)">
+                <input id="name" type="text" placeholder="Your Name/Organization" required>
+                <input id="phone" type="tel" placeholder="Contact Number" required>
+                <input id="foodType" type="text" placeholder="Food Type (e.g. Veg Meals, Bread)" required>
+                <input id="quantity" type="text" placeholder="Quantity (e.g. 10 servings)" required>
+                <input id="location" type="text" placeholder="Pickup Location" required>
+                
+                <button type="submit" style="background: var(--accent); color: #0f172a;">Post Donation</button>
+            </form>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="index.html" style="color: white; text-decoration: none; font-size: 14px; opacity: 0.6;">
+                    <i class="fas fa-arrow-left"></i> Cancel and Return
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Profile | CareConnect</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #4facfe;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(79, 172, 254, 0.3);
+        }
+        .file-upload {
+            margin: 20px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body onload="checkAuth(); loadNavbar(); loadProfile()">
+
+    <div id="nav"></div>
+
+    <div class="container" style="display: flex; justify-content: center;">
+        <div class="glass-card" style="width: 100%; max-width: 450px; text-align: center;">
+            <img id="profileImg" src="https://via.placeholder.com/150" class="profile-img" alt="Profile Picture">
+            
+            <h2 id="userName" style="margin-bottom: 5px;">User Name</h2>
+            <p id="userEmail" style="opacity: 0.6; margin-bottom: 25px;">email@example.com</p>
+
+            <div style="border-top: 1px solid var(--glass-border); padding-top: 20px;">
+                <label for="image" style="display: block; margin-bottom: 10px; font-size: 14px;">Update Profile Photo</label>
+                <input type="file" id="image" class="file-upload">
+                <button onclick="uploadImage()"><i class="fas fa-upload"></i> Upload Photo</button>
+            </div>
+
+            <button class="logout" onclick="logout()" style="background: rgba(255, 75, 43, 0.1); border: 1px solid #ff4b2b; color: #ff4b2b; margin-top: 20px;">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function loadProfile() {
+            const user = JSON.parse(localStorage.getItem("user"));
+            if (user) {
+                document.getElementById("userName").innerText = user.name;
+                document.getElementById("userEmail").innerText = user.email;
+                if (user.profilePic) {
+                    document.getElementById("profileImg").src = "http://localhost:5000/uploads/" + user.profilePic;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

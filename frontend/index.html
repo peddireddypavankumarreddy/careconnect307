@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CareConnect | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div id="nav"></div>
+    <div class="container">
+        <header style="text-align: center; margin-bottom: 50px;">
+            <h1 style="font-size: 3rem; margin-bottom: 10px;">Community Dashboard</h1>
+            <p id="message" style="color:#43e97b; font-weight:bold;"></p>
+        </header>
+
+        <div class="grid">
+            <section>
+                <h2 style="color: #4facfe;"><i class="fas fa-hand-holding-heart"></i> Requests</h2>
+                <div id="requestsList"></div>
+            </section>
+            <section>
+                <h2 style="color: #43e97b;"><i class="fas fa-bowl-food"></i> Surplus</h2>
+                <div id="donationsList"></div>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
