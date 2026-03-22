@@ -1,14 +1,13 @@
-# Push CareConnect to GitHub - ✅ COMPLETE
+# Fix Netlify 404 & Push Updates - Progress Tracker
 
-## Steps from Approved Plan:
-- [x] **Plan approved by user**
-- [x] Create .gitignore (excluding node_modules, uploads, logs, etc.)
-- [x] Create TODO.md
-- [x] git add .
-- [x] git commit -m "Update CareConnect with latest frontend/backend changes" (commit 23e52d0, 1080 files changed)
-- [x] git push origin main (pushed successfully to https://github.com/peddireddypavankumarreddy/careconnect307)
-- [x] Verify push success (git log confirms latest commit on main)
+## Steps:
+- [x] Plan approved
+- [ ] Create netlify.toml & public/_redirects for SPA routing
+- [ ] Update backend/server.js to serve frontend static files
+- [ ] Fix frontend HTML files (full structure, links, meta)
+- [ ] Update frontend/script.js (mock data for static demo, Netlify-friendly)
+- [ ] git add/commit/push to blackboxai/fix-netlify
+- [ ] Create PR
 
-**Project pushed to GitHub.** View at: https://github.com/peddireddypavankumarreddy/careconnect307  
-**Recommendation:** Run `rm -rf backend/node_modules node_modules` && `cd backend && npm install` to clean up node_modules (now ignored).
+**Next:** Netlify config files.
 

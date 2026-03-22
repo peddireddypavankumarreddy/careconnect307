@@ -1,14 +1,30 @@
 <body onload="loadNavbar()">
 <div id="nav"></div>
 
-<form onsubmit="submitDonation(event)">
-<input id="name">
-<input id="phone">
-<input id="location">
-<input id="foodType">
-<input id="quantity">
-<button>Donate</button>
-</form>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - CareConnect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadNavbar()">
+<div id="nav"></div>
+<div class="container">
+    <div class="card">
+        <h2>Donate Food</h2>
+        <form onsubmit="submitDonation(event)">
+            <input id="name" placeholder="Your Name" required>
+            <input id="phone" type="tel" placeholder="Phone" required>
+            <input id="location" placeholder="Location" required>
+            <input id="foodType" placeholder="Food Type" required>
+            <input id="quantity" placeholder="Quantity" required>
+            <button class="btn-green">Post Donation</button>
+        </form>
+    </div>
+</div>
 <script src="script.js"></script>
 </body>
+</html>
