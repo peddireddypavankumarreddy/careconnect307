@@ -1,83 +1,79 @@
 :root {
-    --primary: linear-gradient(135deg, #4facfe, #00f2fe);
-    --accent: #43e97b;
-    --glass: rgba(255, 255, 255, 0.08);
-    --glass-border: rgba(255, 255, 255, 0.15);
-    --bg: #0f172a;
+  --primary: #ff4b2b;
+  --secondary: #ff416c;
+  --green: #22c55e;
+  --blue: #3b82f6;
+  --bg: #f8fafc;
+  --text: #1e293b;
 }
 
 body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    background: var(--bg);
-    color: white;
-    min-height: 100vh;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
 }
 
+/* NAVBAR */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 5%;
-    background: rgba(15, 23, 42, 0.8);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--glass-border);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background: white;
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 14px;
+.navbar a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #555;
 }
 
+.navbar a:hover {
+  color: var(--primary);
+}
+
+/* CONTAINER */
 .container {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 20px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
 }
 
-.glass-card {
-    background: var(--glass);
-    backdrop-filter: blur(15px);
-    border: 1px solid var(--glass-border);
-    border-radius: 20px;
-    padding: 2rem;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+/* CARD */
+.card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
 }
 
-input {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 10px;
-    border: 1px solid var(--glass-border);
-    background: rgba(255, 255, 255, 0.05);
-    color: white;
-    box-sizing: border-box;
-}
-
+/* BUTTONS */
 button {
-    width: 100%;
-    padding: 12px;
-    border-radius: 10px;
-    border: none;
-    background: var(--primary);
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-button:hover {
-    transform: translateY(-2px);
-    filter: brightness(1.1);
+.btn-red { background: var(--primary); color: white; }
+.btn-green { background: var(--green); color: white; }
+.btn-blue { background: var(--blue); color: white; }
+
+/* INPUT */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
 }
 
+/* GRID */
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap: 20px;
 }
