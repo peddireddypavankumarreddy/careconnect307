@@ -1,11 +1,16 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const path = require("path");
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Serve static frontend files
+app.use(express.static(path.join(__dirname, '../frontend')));
+
+// API routes before catch-all
 mongoose.connect("mongodb://127.0.0.1:27017/careconnect")
 .then(() => console.log("MongoDB Connected ✅"))
 .catch(err => console.log(err));
@@ -67,4 +72,9 @@ app.delete("/api/donation/:id", async (req, res) => {
     res.send("Deleted");
 });
 
-app.listen(5000, () => console.log("Server running 🚀"));
+// Catch-all for frontend SPA routing
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/index.html'));
+});
+
+app.listen(5000, () => console.log("Server running on http://localhost:5000 🚀"));
